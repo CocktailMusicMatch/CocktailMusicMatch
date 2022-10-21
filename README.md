@@ -16,7 +16,7 @@ https://developer.musixmatch.com/
 
 
 ## Wireframe Example: 
-
+![Wireframe screenshot](./wireframe_ex.png)
 
 
 ## Tasks/Features
