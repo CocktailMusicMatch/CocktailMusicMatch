@@ -3,6 +3,7 @@ document.querySelectorAll(".menuItem").forEach (function(button){
     button.addEventListener("click", function(event){
         console.log(event)
         var type=event.target.dataset.type
+        // debugger
         console.log(type)
         if (type === "music"){
             // call drink api here
@@ -17,8 +18,7 @@ document.querySelectorAll(".menuItem").forEach (function(button){
 function musicApi(){
     var apiKey = '1e4aeaed93da5dfa3bb4d1955e3db59a'
 
-    var apiURL = `http://api.musixmatch.com/ws/1.1/f_music_genre_id=${apiKey}`
-
+    var apiURL = `https://api.musixmatch.com/ws/1.1/track.search?q_artist=beer&page_size=3&page=1&s_track_rating_desc&apikey=${apiKey}`
 
 return fetch(apiURL, {  
        method: 'GET',  
