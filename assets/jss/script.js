@@ -16,6 +16,7 @@ document.querySelectorAll(".menuItem").forEach (function(button){
 
 function musicApi(){
     var apiKey = '1e4aeaed93da5dfa3bb4d1955e3db59a'
+
     var apiURL = `http://api.musixmatch.com/ws/1.1/f_music_genre_id=${apiKey}`
 
 
