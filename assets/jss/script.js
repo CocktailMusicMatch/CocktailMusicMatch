@@ -16,8 +16,7 @@ document.querySelectorAll(".menuItem").forEach (function(button){
 
 function musicApi(){
     var apiKey = '1e4aeaed93da5dfa3bb4d1955e3db59a'
-    var apiURL = 'https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/$'+apiKey
-    // https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/track.search?q_artist=kanye&q_track=ultralight&apikey=
+    var apiURL = 'http://api.musixmatch.com/ws/1.1/$'+apiKey
     fetch(apiURL)
     .then(res => res.json())
     .then(data => {
