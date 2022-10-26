@@ -4,7 +4,7 @@ document.querySelectorAll(".menuItem").forEach (function(button){
         console.log(event)
         var type=event.target.dataset.type
         console.log(type)
-        if (type === "music"){
+        if (type === "game"){
             // call drink api here
             drinkApi()
         } else if (type === "drinks") {
@@ -14,50 +14,25 @@ document.querySelectorAll(".menuItem").forEach (function(button){
     })
 })
 
-function musicApi(){
-    var apiKey = '1e4aeaed93da5dfa3bb4d1955e3db59a'
-    var apiURL = `http://api.musixmatch.com/ws/1.1/f_music_genre_id=${apiKey}`
+function gameApi(){
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'c35a4bee2emsh6c315d3399c090bp11f346jsnc0801ef84967',
+		'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+	}
+};
 
-
-return fetch(apiURL, {  
-       method: 'GET',  
-       withCredentials: true,  
-       crossorigin: true,  
-       mode: 'no-cors',     
-     })  
-       .then(res => {
-        // console.log(res)
-        // res.json()
-    })  
-       .then((data) => {  
-        //  console.log(data);  
-       })  
-       .catch((error) => {  
-         console.error(error);  
-       });  
-   };  
-
-    //    },fetch(apiURL, {
-    //         mode: 'no-cors',
-    //         method: "post",
-    //         headers: {
-    //              "Content-Type": "application/json"
-         
-            // body: JSON.stringify(ob)
-//  })
-//     fetch(apiURL)
-//     .then(res => res.json())
-//     .then(data => {
-//         console.log(data)
-//     })
-// }
-//_________________________________________________
-
-
-function drinkApi(){
-    fetch("http://www.thecocktaildb.com/api/json/v1/1/random.php")
-    .then(res => res.json())
-    .then(data => {
-        console.log(data)
-    })
+return fetch('https://free-to-play-games-database.p.rapidapi.com/api/game?id=452', options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
 }
+
+    function drinkApi(){
+        fetch("http://www.thecocktaildb.com/api/json/v1/1/random.php")
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+        })
+    }
