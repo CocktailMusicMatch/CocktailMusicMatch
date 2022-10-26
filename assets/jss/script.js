@@ -3,8 +3,10 @@ document.querySelectorAll(".menuItem").forEach (function(button){
     button.addEventListener("click", function(event){
         console.log(event)
         var type=event.target.dataset.type
+        var selection=event.target.innerText
         // debugger
         console.log(type)
+        console.log(selection)
         if (type === "music"){
             // call drink api here
             drinkApi()
