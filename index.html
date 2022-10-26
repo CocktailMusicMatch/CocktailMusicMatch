@@ -37,6 +37,7 @@
                     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
                     <!-- Selection of music genra drop down buttons -->
                     <div class="inline-flex items-stretch rounded-md border bg-white" x-data="{ isActive: false }">
+        
                         <p
                             class="rounded-l-md px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-700">
                             Select Music Genre
@@ -58,49 +59,49 @@
                                 role="menu" x-cloak x-transition x-show="isActive" x-on:click.away="isActive = false"
                                 x-on:keydown.escape.window="isActive = false">
                                 <div class="p-2">
-                                    <a href="#" 
+                                    <a href="#" id="Blues"
                                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem" 
                                         role="menuitem" data-type="music">
                                         Blues
                                     </a>
 
-                                    <a href="#"
+                                    <a href="#" id="Country"
                                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
                                         role="menuitem" data-type="music">
                                         Country
                                     </a>
 
-                                    <a href="#"
+                                    <a href="#" id="Dance"
                                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
                                         role="menuitem" data-type="music">
                                         Dance
                                     </a>
 
-                                    <a href="#"
+                                    <a href="#" id="Jazz"
                                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
                                         role="menuitem" data-type="music">
                                         Jazz
                                     </a>
 
-                                    <a href="#"
+                                    <a href="#" id="Rhythm & Blues"
                                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
                                         role="menuitem" data-type="music">
                                         Rhythm & Blues
                                     </a>
 
-                                    <a href="#"
+                                    <a href="#" id="Rock"
                                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
                                         role="menuitem" data-type="music">
                                         Rock
                                     </a>
 
-                                    <a href="#"
+                                    <a href="#" id="Rock & Roll"
                                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
                                         role="menuitem" data-type="music">
                                         Rock & Roll
                                     </a>
 
-                                    <a href="#"
+                                    <a href="#" id="Soul"
                                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
                                         role="menuitem" data-type="music">
                                         Soul
@@ -131,49 +132,49 @@
                                 role="menu" x-cloak x-transition x-show="isActive" x-on:click.away="isActive = false"
                                 x-on:keydown.escape.window="isActive = false">
                                 <div class="p-2">
-                                    <a href="#"
+                                    <a href="#" id="Light Beer"
                                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
                                         role="menuitem" data-type="drinks">
-                                        Light Beer
+                                        Non_Alcoholic
                                     </a>
 
-                                    <a href="#"
+                                    <a href="#" id="Dark Beer"
                                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
                                         role="menuitem" data-type="drinks">
-                                        Dark Beer
+                                        Alcoholic
                                     </a>
 
-                                    <a href="#"
+                                    <a href="#" id="Red Wine"
                                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
                                         role="menuitem" data-type="drinks">
                                         Red Wine
                                     </a>
 
-                                    <a href="#"
+                                    <a href="#" id="White Wine"
                                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
                                         role="menuitem" data-type="drinks">
                                         White Wine
                                     </a>
 
-                                    <a href="#" 
+                                    <a href="#" id="Rum"
                                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
                                         role="menuitem" data-type="drinks">
                                         Rum
                                     </a>
 
-                                    <a href="#"
+                                    <a href="#" id="Tequila"
                                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
                                         role="menuitem" data-type="drinks">
                                         Tequila
                                     </a>
 
-                                    <a href="#"
+                                    <a href="#" id="Vodka"
                                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
                                         role="menuitem" data-type="drinks">
                                         Vodka
                                     </a>
 
-                                    <a href="#"
+                                    <a href="#" id="Whiskey"
                                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
                                         role="menuitem" data-type="drinks">
                                         Whiskey

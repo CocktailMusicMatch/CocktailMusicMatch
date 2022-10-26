@@ -12,10 +12,13 @@ document.querySelectorAll(".menuItem").forEach (function(button){
             drinkApi(selection)
         } else if (type === "drinks") {
             // call music api here
+
             drinkApi(selection)
+
         }
     })
 })
+
 
 // pull random drink
 function drinkApi(selection){
@@ -54,4 +57,5 @@ function drinkApi(selection){
 
         })
     });
+
 }
