@@ -60,3 +60,38 @@ function drinkApi(){
         console.log(data)
     })
 }
+
+document.getElementById("Blues").addEventListener("click", addMusicToLocalStorage)
+document.getElementById("Country").addEventListener("click", addMusicToLocalStorage)
+document.getElementById("Dance").addEventListener("click", addMusicToLocalStorage)
+document.getElementById("Jazz").addEventListener("click", addMusicToLocalStorage)
+document.getElementById("Rhythm & Blues").addEventListener("click", addMusicToLocalStorage)
+document.getElementById("Rock & Roll").addEventListener("click",addMusicToLocalStorage)
+document.getElementById("Soul").addEventListener("click",addMusicToLocalStorage)
+document.getElementById("Rock").addEventListener("click",addMusicToLocalStorage)
+
+document.getElementById("Light Beer").addEventListener("click", addDrinksToLocalStorage)
+document.getElementById("Dark Beer").addEventListener("click", addDrinksToLocalStorage)
+document.getElementById("Red Wine").addEventListener("click", addDrinksToLocalStorage)
+document.getElementById("White Wine").addEventListener("click", addDrinksToLocalStorage)
+document.getElementById("Rum").addEventListener("click", addDrinksToLocalStorage)
+document.getElementById("Tequila").addEventListener("click", addDrinksToLocalStorage)
+document.getElementById("Vodka").addEventListener("click", addDrinksToLocalStorage)
+document.getElementById("Whisky").addEventListener("click", addDrinksToLocalStorage)
+
+function addMusicToLocalStorage(event){
+    event.preventDefault();
+    console.log("addMusicToLocalStorage");
+    var clickedElementValue = event.target.getAttribute('id')
+    console.log(clickedElementValue);
+    localStorage.setItem("Music", clickedElementValue)
+}
+
+
+function addDrinksToLocalStorage(event){
+    event.preventDefault();
+    console.log("addDrinksToLocalStorage");
+    var clickedElementValue = event.target.getAttribute('id')
+    console.log(clickedElementValue);
+    localStorage.setItem("Drink", clickedElementValue)
+}
