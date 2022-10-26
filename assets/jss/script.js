@@ -31,7 +31,7 @@ function drinkApi(){
         console.log(data)
     })
 }
-
+// All of the music genre ids turned into values
 document.getElementById("Blues").addEventListener("click", addMusicToLocalStorage)
 document.getElementById("Country").addEventListener("click", addMusicToLocalStorage)
 document.getElementById("Dance").addEventListener("click", addMusicToLocalStorage)
@@ -41,6 +41,7 @@ document.getElementById("Rock & Roll").addEventListener("click",addMusicToLocalS
 document.getElementById("Soul").addEventListener("click",addMusicToLocalStorage)
 document.getElementById("Rock").addEventListener("click",addMusicToLocalStorage)
 
+// All of the drink ids turned into values 
 document.getElementById("Light Beer").addEventListener("click", addDrinksToLocalStorage)
 document.getElementById("Dark Beer").addEventListener("click", addDrinksToLocalStorage)
 document.getElementById("Red Wine").addEventListener("click", addDrinksToLocalStorage)
@@ -50,6 +51,7 @@ document.getElementById("Tequila").addEventListener("click", addDrinksToLocalSto
 document.getElementById("Vodka").addEventListener("click", addDrinksToLocalStorage)
 document.getElementById("Whisky").addEventListener("click", addDrinksToLocalStorage)
 
+// The key and function for local storage values
 function addMusicToLocalStorage(event){
     event.preventDefault();
     console.log("addMusicToLocalStorage");
@@ -58,7 +60,7 @@ function addMusicToLocalStorage(event){
     localStorage.setItem("Music", clickedElementValue)
 }
 
-
+// The key and function for local storage values
 function addDrinksToLocalStorage(event){
     event.preventDefault();
     console.log("addDrinksToLocalStorage");
