@@ -17,6 +17,33 @@ document.querySelectorAll(".menuItem").forEach (function(button){
 
         }
     })
+
+}
+// All of the music genre ids turned into values
+
+
+// All of the drink ids turned into values 
+document.getElementById("Light Beer").addEventListener("click", addDrinksToLocalStorage)
+document.getElementById("Dark Beer").addEventListener("click", addDrinksToLocalStorage)
+document.getElementById("Red Wine").addEventListener("click", addDrinksToLocalStorage)
+document.getElementById("White Wine").addEventListener("click", addDrinksToLocalStorage)
+document.getElementById("Rum").addEventListener("click", addDrinksToLocalStorage)
+document.getElementById("Tequila").addEventListener("click", addDrinksToLocalStorage)
+document.getElementById("Vodka").addEventListener("click", addDrinksToLocalStorage)
+document.getElementById("Whisky").addEventListener("click", addDrinksToLocalStorage)
+
+
+}
+
+// The key and function for local storage values
+function addDrinksToLocalStorage(event){
+    event.preventDefault();
+    console.log("addDrinksToLocalStorage");
+    var clickedElementValue = event.target.getAttribute('id')
+    console.log(clickedElementValue);
+    localStorage.setItem("Drink", clickedElementValue)
+}
+=======
 })
 
 
@@ -59,3 +86,4 @@ function drinkApi(selection){
     });
 
 }
+
