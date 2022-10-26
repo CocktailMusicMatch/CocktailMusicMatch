@@ -185,6 +185,40 @@
                             </div>
                         </div>
                     </div>
+
+                    
+                    <button class="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-700 transition" onclick="openModal('modal')">Open modal</button>
+
+                    <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
+                    <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
+
+                        <!-- Modal header -->
+                        <div class="flex justify-between items-center bg-green-500 text-white text-xl rounded-t-md px-4 py-2">
+                            <h3>Modal header</h3>
+                            <button onclick="closeModal('modal')">x</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="max-h-48 overflow-y-scroll p-4 bg-green-800">
+                        
+                        
+                            <p>Scrollable modal body</p>
+                            <p>Scrollable modal body</p>
+                            <p>Scrollable modal body</p>
+                            <p>Scrollable modal body</p>
+                            <p>Scrollable modal body</p>
+                            <p>Scrollable modal body</p>
+                            <p>Scrollable modal body</p>
+                            <p>Scrollable modal body</p>
+                            <p>Scrollable modal body</p>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
+                            <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
+                        </div>
+                    </div>
+                </div>                    
     </section>
     
     <script src="./assets/jss/script.js"></script>
