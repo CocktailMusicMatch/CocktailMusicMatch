@@ -14,15 +14,20 @@ document.querySelectorAll(".menuItem").forEach (function(button){
     })
 })
 
-function musicApi(){
-    var apiKey = '1e4aeaed93da5dfa3bb4d1955e3db59a'
-    var apiURL = 'http://api.musixmatch.com/ws/1.1/$(apiKey)'
-    fetch(apiURL)
-    .then(res => res.json())
-    .then(data => {
-        console.log(data)
-    })
-}
+function gameApi() {
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'c35a4bee2emsh6c315d3399c090bp11f346jsnc0801ef84967',
+		'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+	}
+};
+
+return fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=browser', options)
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
+};
 
 function drinkApi(){
     fetch("http://www.thecocktaildb.com/api/json/v1/1/random.php")
