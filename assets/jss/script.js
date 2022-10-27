@@ -45,15 +45,16 @@ window.closeModal = function(modalId) {
 // document.getElementById("Whisky").addEventListener("click", addDrinksToLocalStorage)
 
 // The key and function for local storage values
-function addDrinksToLocalStorage(event){
-    event.preventDefault();
-    console.log("addDrinksToLocalStorage");
-    var clickedElementValue = event.target.getAttribute('id')
-    console.log(clickedElementValue);
-    localStorage.setItem("Drink", clickedElementValue)
+// function addDrinksToLocalStorage(event){
+//     event.preventDefault();
+//     console.log("addDrinksToLocalStorage");
+//     var clickedElementValue = event.target.getAttribute('id')
+//     console.log(clickedElementValue);
+//     localStorage.setItem("Drink", clickedElementValue)
     
-}
+// }
 
+//pull random game
 function gameApi(){
     const options = {
       method: 'GET',
@@ -64,38 +65,18 @@ function gameApi(){
     };
     return fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=browser', options)
       .then(response => response.json())
-      .then(response => console.log(response))
+      .then(games => {
+        console.log(games)
+        var randomIndex = Math.floor(Math.random()*games.length);
+        console.log(randomIndex);
+        var randomGame = games[randomIndex];
+        console.log(randomGame);
+        console.log(randomGame.title);
+        console.log(randomGame.game_url);
+        console.log(randomGame.thumbnail);
+      })
       .catch(err => console.error(err));
     }
-
-// gets data for playable games in browser only and logs to console, then pulls random game
-// async function gameApi(){
-//     const options = {
-//       method: 'GET',
-//       headers: {
-//         'X-RapidAPI-Key': 'c35a4bee2emsh6c315d3399c090bp11f346jsnc0801ef84967',
-//         'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
-//       }
-//     };
-//     try {
-//         const response = await fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=browser', options)
-//         const response_1 = await response.json()
-//         return console.log(response_1)
-//     } catch (err) {
-//         return console.error(err)
-//     }; fetch(options).then(function(data) {
-//           var random = Math.floor(Math.random()*data.response.length);
-//           var randomGame = (data.response[random].strGame);
-//           console.log(randomGame);
-//           var gameUrl = ('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=browser'+randomGame);
-//           console.log(gameUrl);
-//           fetch(gameUrl).then(function(response) {
-//               return response.json();
-//           }).then(function (){
-//               console.log(randomGame);
-//           })
-//       });
-// };
     
 // pull random drink
 function drinkApi(selection){
