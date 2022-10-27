@@ -6,32 +6,31 @@ document.querySelectorAll(".menuItem").forEach (function(button){
         var selection=event.target.innerText
         // debugger
         console.log(type)
-
+        
         if (type === "game"){
-
+            
             // call drink api here
             drinkApi(selection)
         } else if (type === "drinks") {
             // call music api here
-
+            
             drinkApi(selection)
-
+            
         }
     })
-
+    
 })
 
 // Modal
-
 window.openModal = function(modalId) {
     document.getElementById(modalId).style.display = 'block'
     document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
-  }
-  
-  window.closeModal = function(modalId) {
+}
+
+window.closeModal = function(modalId) {
     document.getElementById(modalId).style.display = 'none'
     document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-  }
+}
 
 
 
@@ -52,9 +51,10 @@ function addDrinksToLocalStorage(event){
     var clickedElementValue = event.target.getAttribute('id')
     console.log(clickedElementValue);
     localStorage.setItem("Drink", clickedElementValue)
-
+    
 }
 
+<<<<<<< HEAD
 // gets data for playable games in browser only and logs to console
 const options = {
 	method: 'GET',
@@ -71,6 +71,8 @@ fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=bro
 	.catch(err => console.error(err));
 
 
+=======
+>>>>>>> 4eeab2e333caaf1d997d0f630aaaf54d707890bd
 // pull random drink
 function drinkApi(selection){
     console.log(selection);
@@ -88,27 +90,27 @@ function drinkApi(selection){
             return response.json();
         }) .then(function(data) {
             console.log(data);
-            console.log(data.drinks[0].strDrink)
-            console.log(data.drinks[0].strInstructions)
-            console.log(data.drinks[0].strMeasure1 , data.drinks[0].strIngredient1)
-            console.log(data.drinks[0].strMeasure2 , data.drinks[0].strIngredient2)
-            console.log(data.drinks[0].strMeasure3 , data.drinks[0].strIngredient3)
-            console.log(data.drinks[0].strMeasure4 , data.drinks[0].strIngredient4)
-            console.log(data.drinks[0].strMeasure5 , data.drinks[0].strIngredient5)
-            console.log(data.drinks[0].strMeasure6 , data.drinks[0].strIngredient6)
-            console.log(data.drinks[0].strMeasure7 , data.drinks[0].strIngredient7)
-            console.log(data.drinks[0].strMeasure8 , data.drinks[0].strIngredient8)
-            console.log(data.drinks[0].strMeasure9 , data.drinks[0].strIngredient9)
-            console.log(data.drinks[0].strMeasure10 , data.drinks[0].strIngredient10)
-            console.log(data.drinks[0].strMeasure11 , data.drinks[0].strIngredient11)
-            console.log(data.drinks[0].strMeasure12 , data.drinks[0].strIngredient12)
-            console.log(data.drinks[0].strMeasure13 , data.drinks[0].strIngredient13)
-            console.log(data.drinks[0].strMeasure14 , data.drinks[0].strIngredient14)
-            console.log(data.drinks[0].strMeasure15 , data.drinks[0].strIngredient15)
+            openModal('modal');
+            var modalHead = document.getElementById("modalHead");
+            var modalP = document.getElementById("modalP");
+            var ingredientsList = document.getElementById("ingredientsList");
+            var modalImage = document.getElementById('modalImage');
+            modalHead.textContent = (data.drinks[0].strDrink);
+            for(let i=1; i<16; i++) {
+                if (data.drinks[0][`strMeasure${i}`] === null) {
+                break;
+                }
+                var ingredient = document.createElement('li');
+                ingredient.innerHTML = data.drinks[0][`strMeasure${i}`]+data.drinks[0][`strIngredient${i}`];
+                ingredientsList.appendChild(ingredient);
+            }
+
+            modalP.textContent = (data.drinks[0].strInstructions);
+            modalImage.src = (data.drinks[0].strDrinkThumb);
 
         })
     });
-
+    
 }
 
 <<<<<<< HEAD

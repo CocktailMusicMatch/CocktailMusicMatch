@@ -119,24 +119,16 @@
 
                         <!-- Modal header -->
                         <div class="flex justify-between items-center bg-green-500 text-white text-xl rounded-t-md px-4 py-2">
-                            <h3>Modal header</h3>
+                            <h3 id="modalHead"></h3>
                             <button onclick="closeModal('modal')">x</button>
                         </div>
 
                         <!-- Modal body -->
-                        <div class="max-h-48 overflow-y-scroll li-4 bg-green-800">
-                        
-                            <ul>
-                                <li>Scrollable modal body</li>
-                                <li>Scrollable modal body</li>
-                                <li>Scrollable modal body</li>
-                                <li>Scrollable modal body</li>
-                                <li>Scrollable modal body</li>
-                                <li>Scrollable modal body</li>
-                                <li>Scrollable modal body</li>
-                                <li>Scrollable modal body</li>
-                                <li>Scrollable modal body</li>
+                        <div class="max-h-full overflow-y-scroll li-4 bg-green-800">
+                            <p id="modalP"></p>
+                            <ul class="list-none" id="ingredientsList">ingredients List
                             </ul>
+                            <img id='modalImage' src="*" alt="drink image">
                         </div>
 
                         <!-- Modal footer -->
