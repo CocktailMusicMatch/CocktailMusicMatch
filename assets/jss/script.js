@@ -21,6 +21,19 @@ document.querySelectorAll(".menuItem").forEach (function(button){
 
 })
 
+// Modal
+
+window.openModal = function(modalId) {
+    document.getElementById(modalId).style.display = 'block'
+    document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+  }
+  
+  window.closeModal = function(modalId) {
+    document.getElementById(modalId).style.display = 'none'
+    document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+  }
+
+
 
 // All of the drink ids turned into values 
 // document.getElementById("Light Beer").addEventListener("click", addDrinksToLocalStorage)
@@ -98,6 +111,7 @@ function drinkApi(selection){
 
 }
 
+<<<<<<< HEAD
 //pulls random game
 function gameApi(selection){
     console.log(selection);
@@ -132,3 +146,5 @@ window.openModal = function(modalId) {
   }
 
 
+=======
+>>>>>>> 294370cecf6a50ac85dccbfab84267c978794c56
