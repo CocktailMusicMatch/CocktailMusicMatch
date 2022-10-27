@@ -112,29 +112,35 @@
                     </div>
 
                     
-                    <button class="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-700 transition" onclick="openModal('modal')">Open modal</button>
+                    <!-- <button class="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-700 transition" onclick="openModal('modal')">Open modal</button> -->
 
-                    <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
-                    <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
+                    <div id="modal" class="fade fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-x-auto overflow-y-auto h-full w-full px-4 modal">
+                        <div class="relative top-10 mx-auto shadow-xl  rounded-md bg-white max-w-md">
 
-                        <!-- Modal header -->
-                        <div class="flex justify-between items-center bg-green-500 text-white text-xl rounded-t-md px-4 py-2">
-                            <h3 id="modalHead"></h3>
-                            <button onclick="closeModal('modal')">x</button>
-                        </div>
+                            <!-- Modal header -->
+                            <div class="flex justify-between items-center bg-zinc-600 text-white text-xl rounded-t-md px-4 py-2">
+                                <h3 id="modalHead"></h3>
+                                <button onclick="closeModal('modal')">x</button>
+                            </div>
 
-                        <!-- Modal body -->
-                        <div class="max-h-full overflow-y-scroll li-4 bg-green-800">
-                            <p id="modalP"></p>
-                            <ul class="list-none" id="ingredientsList">ingredients List
-                            </ul>
-                            <img id='modalImage' src="*" alt="drink image">
-                        </div>
-
-                        <!-- Modal footer -->
-                        <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
-                            <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
-                        </div>
+                            <!-- Modal body -->
+                            <div class="flex flex-col items-center overflow-scroll bg-zinc-500">
+                                <div class="max-h-full li-4 bg-zinc-500">
+                                    <p id="modalP"></p>
+                                    <ul class="list-none" id="ingredientsList">ingredients List
+                                    </ul>
+                                    <img id='modalImage' src="*" alt="drink image">
+                                </div>
+                                <div class="max-h-full li-4 bg-zinc-500">
+                                    <h4 class="text-lg">Pairs well with</h4>
+                                    <p id="gameP">test</p>
+                                    <img id='gameImage' src="https://www.freetogame.com/g/540/thumbnail.jpg" alt="test">
+                                </div>
+                            </div>
+                                <!-- Modal footer -->
+                                <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
+                                    <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
+                            </div>
                     </div>
                 </div>                    
     </section>
