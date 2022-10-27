@@ -1,4 +1,4 @@
-//Add event listener to music and cocktail classes
+//Add event listener to game and cocktail classes
 document.querySelectorAll(".menuItem").forEach (function(button){
     button.addEventListener("click", function(event){
         console.log(event)
@@ -12,7 +12,7 @@ document.querySelectorAll(".menuItem").forEach (function(button){
             // call drink api here
             drinkApi(selection)
         } else if (type === "drinks") {
-            // call music api here
+            // call game api here
             
             drinkApi(selection)
             
@@ -45,15 +45,39 @@ window.closeModal = function(modalId) {
 // document.getElementById("Whisky").addEventListener("click", addDrinksToLocalStorage)
 
 // The key and function for local storage values
-function addDrinksToLocalStorage(event){
-    event.preventDefault();
-    console.log("addDrinksToLocalStorage");
-    var clickedElementValue = event.target.getAttribute('id')
-    console.log(clickedElementValue);
-    localStorage.setItem("Drink", clickedElementValue)
+// function addDrinksToLocalStorage(event){
+//     event.preventDefault();
+//     console.log("addDrinksToLocalStorage");
+//     var clickedElementValue = event.target.getAttribute('id')
+//     console.log(clickedElementValue);
+//     localStorage.setItem("Drink", clickedElementValue)
     
-}
+// }
 
+//pull random game
+function gameApi(){
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': 'c35a4bee2emsh6c315d3399c090bp11f346jsnc0801ef84967',
+        'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+      }
+    };
+    return fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=browser', options)
+      .then(response => response.json())
+      .then(games => {
+        console.log(games)
+        var randomIndex = Math.floor(Math.random()*games.length);
+        console.log(randomIndex);
+        var randomGame = games[randomIndex];
+        console.log(randomGame);
+        console.log(randomGame.title);
+        console.log(randomGame.game_url);
+        console.log(randomGame.thumbnail);
+      })
+      .catch(err => console.error(err));
+    }
+    
 // pull random drink
 function drinkApi(selection){
     console.log(selection);
@@ -93,4 +117,17 @@ function drinkApi(selection){
     });
     
 }
+
+// Modal
+
+window.openModal = function(modalId) {
+    document.getElementById(modalId).style.display = 'block'
+    document.getElementsByTagName('body')[0].classList.add('overflow-y-hidden')
+  }
+  
+  window.closeModal = function(modalId) {
+    document.getElementById(modalId).style.display = 'none'
+    document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
+  }
+
 
