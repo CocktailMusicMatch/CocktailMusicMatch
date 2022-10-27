@@ -20,7 +20,5 @@ game api
 
 
 ## Tasks/Features
-* Generate a song and drink with a recipe
+* Generate a game that is playale in browser and drink with a recipe
 * Be able to filter by which type of base drink you'd like
-* Be able to filter by genre that you'd prefer
-
