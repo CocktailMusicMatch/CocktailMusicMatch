@@ -6,8 +6,9 @@ document.querySelectorAll(".menuItem").forEach (function(button){
         var selection=event.target.innerText
         // debugger
         console.log(type)
-        console.log(selection)
-        if (type === "music"){
+
+        if (type === "game"){
+
             // call drink api here
             drinkApi(selection)
         } else if (type === "drinks") {
@@ -19,6 +20,7 @@ document.querySelectorAll(".menuItem").forEach (function(button){
     })
 
 })
+
 
 // All of the drink ids turned into values 
 // document.getElementById("Light Beer").addEventListener("click", addDrinksToLocalStorage)
@@ -92,4 +94,5 @@ window.openModal = function(modalId) {
     document.getElementById(modalId).style.display = 'none'
     document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
   }
+
 
