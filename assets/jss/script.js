@@ -6,8 +6,9 @@ document.querySelectorAll(".menuItem").forEach (function(button){
         var selection=event.target.innerText
         // debugger
         console.log(type)
-        console.log(selection)
-        if (type === "music"){
+
+        if (type === "game"){
+
             // call drink api here
             drinkApi(selection)
         } else if (type === "drinks") {

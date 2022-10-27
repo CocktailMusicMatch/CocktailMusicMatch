@@ -21,13 +21,12 @@
             <div class="mx-auto max-w-3xl text-center">
                 <h1
                     class="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
-                    Cocktail Music Match
-                    <span class="sm:block"> Mixing Music with Cocktials </span>
+                    Cocktail Game Match
+                    <span class="sm:block"> Mixing Games with Cocktials </span>
                 </h1>
                 <p class="mx-auto mt-4 max-w-xl sm:text-xl sm:leading-relaxed">
-                    Make a selection! <br>
-                    If you select a music genre, a beverage will populate to go along with your song.<br>
-                    If you select a base for your beverage, a music selection will present for you.<br>
+                    Select your beverage base choice! <br>
+                    Then a game will present for you.<br>
                     Enjoy!
                 </p>
 
@@ -35,82 +34,8 @@
 
                     <!-- script link to allow dropdowns to work from Tialwinds -->
                     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-                    <!-- Selection of music genra drop down buttons -->
-                    <div class="inline-flex items-stretch rounded-md border bg-white" x-data="{ isActive: false }">
-        
-                        <p
-                            class="rounded-l-md px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-700">
-                            Select Music Genre
-                        </p>
+                   
 
-                        <div class="relative">
-                            <button type="button" x-on:click="isActive = !isActive"
-                                class="inline-flex h-full items-center justify-center rounded-r-md border-l border-gray-100 px-2 text-gray-600 hover:bg-gray-50 hover:text-gray-700">
-                                <span class="sr-only">Menu</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 20 20"
-                                    fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </button>
-
-                            <div class="absolute right-0 z-10 mt-4 w-56 origin-top-right rounded-md border border-gray-100 bg-white shadow-lg"
-                                role="menu" x-cloak x-transition x-show="isActive" x-on:click.away="isActive = false"
-                                x-on:keydown.escape.window="isActive = false">
-                                <div class="p-2"> 
-                                    <!--Making Blues a id for local storage-->
-                                    <a href="#" id="Blues"
-                                        class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem" 
-                                        role="menuitem" data-type="music">
-                                        Blues
-                                    </a>
-
-                                    <a href="#" id="Country"
-                                        class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
-                                        role="menuitem" data-type="music">
-                                        Country
-                                    </a>
-                                     <!--Making Dance a id for local storage-->
-                                    <a href="#" id="Dance"
-                                        class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
-                                        role="menuitem" data-type="music">
-                                        Dance
-                                    </a>
-                                    <!--Making Jazz a id for local storage-->
-                                    <a href="#" id="Jazz"
-                                        class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
-                                        role="menuitem" data-type="music">
-                                        Jazz
-                                    </a>
-                                    <!--Making Rhythm and Blues a id for local storage-->
-                                    <a href="#" id="Rhythm & Blues"
-                                        class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
-                                        role="menuitem" data-type="music">
-                                        Rhythm & Blues
-                                    </a>
-                                    <!--Making Rock a id for local storage-->
-                                    <a href="#" id="Rock"
-                                        class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
-                                        role="menuitem" data-type="music">
-                                        Rock
-                                    </a>
-                                    <!--Making Rock and Roll a id for local storage-->
-                                    <a href="#" id="Rock & Roll"
-                                        class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
-                                        role="menuitem" data-type="music">
-                                        Rock & Roll
-                                    </a>
-                                    <!--Making Soul a id for local storage-->
-                                    <a href="#" id="Soul"
-                                        class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
-                                        role="menuitem" data-type="music">
-                                        Soul
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                     <!-- Selection of base beverages drop down buttons-->
                     <div class="inline-flex items-stretch rounded-md border bg-white" x-data="{ isActive: false }">
