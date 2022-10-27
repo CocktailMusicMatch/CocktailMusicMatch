@@ -74,6 +74,12 @@ function gameApi(){
         console.log(randomGame.title);
         console.log(randomGame.game_url);
         console.log(randomGame.thumbnail);
+        var modalGame = document.getElementById("gameP");
+        var modalGameImage = document.getElementById("gameImage");
+        var modalGameUrl = document.getElementById("game_url");
+        modalGame.textContent = (randomGame.title);
+        modalGameImage.src = (randomGame.thumbnail); 
+        modalGameUrl.href = (randomGame.game_url);
       })
       .catch(err => console.error(err));
     }
@@ -109,13 +115,12 @@ function drinkApi(selection){
                 ingredient.innerHTML = data.drinks[0][`strMeasure${i}`]+data.drinks[0][`strIngredient${i}`];
                 ingredientsList.appendChild(ingredient);
             }
-
+            
             modalP.textContent = (data.drinks[0].strInstructions);
             modalImage.src = (data.drinks[0].strDrinkThumb);
-
         })
     });
-    
+  gameApi();
 }
 
 // Modal
