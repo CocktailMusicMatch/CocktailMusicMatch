@@ -54,22 +54,49 @@ function addDrinksToLocalStorage(event){
     
 }
 
-// gets data for playable games in browser only and logs to console
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': 'c35a4bee2emsh6c315d3399c090bp11f346jsnc0801ef84967',
-		'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
-	}
-};
-fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=browser', options)
-	.then(response => response.json())
-	.then(response => {
-            console.log(response)
-        })
-	.catch(err => console.error(err));
+function gameApi(){
+    const options = {
+      method: 'GET',
+      headers: {
+        'X-RapidAPI-Key': 'c35a4bee2emsh6c315d3399c090bp11f346jsnc0801ef84967',
+        'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+      }
+    };
+    return fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=browser', options)
+      .then(response => response.json())
+      .then(response => console.log(response))
+      .catch(err => console.error(err));
+    }
 
-
+// gets data for playable games in browser only and logs to console, then pulls random game
+// async function gameApi(){
+//     const options = {
+//       method: 'GET',
+//       headers: {
+//         'X-RapidAPI-Key': 'c35a4bee2emsh6c315d3399c090bp11f346jsnc0801ef84967',
+//         'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+//       }
+//     };
+//     try {
+//         const response = await fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=browser', options)
+//         const response_1 = await response.json()
+//         return console.log(response_1)
+//     } catch (err) {
+//         return console.error(err)
+//     }; fetch(options).then(function(data) {
+//           var random = Math.floor(Math.random()*data.response.length);
+//           var randomGame = (data.response[random].strGame);
+//           console.log(randomGame);
+//           var gameUrl = ('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=browser'+randomGame);
+//           console.log(gameUrl);
+//           fetch(gameUrl).then(function(response) {
+//               return response.json();
+//           }).then(function (){
+//               console.log(randomGame);
+//           })
+//       });
+// };
+    
 // pull random drink
 function drinkApi(selection){
     console.log(selection);
@@ -108,27 +135,6 @@ function drinkApi(selection){
         })
     });
     
-}
-
-//pulls random game
-function gameApi(selection){
-    console.log(selection);
-    var apiURL=('free-to-play-games-database.p.rapidapi.com'+ selection)
-    console.log(apiURL);
-    fetch(apiURL).then(function(response) {
-        return response.json();
-    }) .then(function(data) {
-        var random = Math.floor(Math.random()*data.response.length);
-        var randomGame = (data.response[random].strGame);
-        console.log(randomGame);
-        var gameUrl = ('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=browser'+randomDrink);
-        console.log(gameUrl);
-        fetch(gameUrl).then(function(response) {
-            return response.json();
-            console.log(data);
-        })
-    });
-
 }
 
 // Modal
