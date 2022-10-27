@@ -1,4 +1,4 @@
-//Add event listener to music and cocktail classes
+//Add event listener to game and cocktail classes
 document.querySelectorAll(".menuItem").forEach (function(button){
     button.addEventListener("click", function(event){
         console.log(event)
@@ -12,7 +12,7 @@ document.querySelectorAll(".menuItem").forEach (function(button){
             // call drink api here
             drinkApi(selection)
         } else if (type === "drinks") {
-            // call music api here
+            // call game api here
             
             drinkApi(selection)
             
@@ -54,7 +54,6 @@ function addDrinksToLocalStorage(event){
     
 }
 
-<<<<<<< HEAD
 // gets data for playable games in browser only and logs to console
 const options = {
 	method: 'GET',
@@ -71,8 +70,6 @@ fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?platform=bro
 	.catch(err => console.error(err));
 
 
-=======
->>>>>>> 4eeab2e333caaf1d997d0f630aaaf54d707890bd
 // pull random drink
 function drinkApi(selection){
     console.log(selection);
@@ -113,7 +110,6 @@ function drinkApi(selection){
     
 }
 
-<<<<<<< HEAD
 //pulls random game
 function gameApi(selection){
     console.log(selection);
@@ -148,5 +144,3 @@ window.openModal = function(modalId) {
   }
 
 
-=======
->>>>>>> 294370cecf6a50ac85dccbfab84267c978794c56
