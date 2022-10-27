@@ -1,17 +1,17 @@
 # CocktailMusicMatch
 
-Have a Cocktail with a recipe generated with a song to compliment it.
+Have a Cocktail with a recipe generated with a game to play while I enjoy it.
 
 
 ## User Story
-As a cocktail hobbyist, I want to see a random cocktail and song, So I can enjoy new drinks and music.
+As a cocktail hobbyist, I want to see a random cocktail and game, So I can enjoy new drinks and gaming.
 
 
 ## APIs:
 
 https://www.thecocktaildb.com/ 
 
-https://developer.musixmatch.com/ 
+game api 
 
 
 
