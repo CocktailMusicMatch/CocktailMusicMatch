@@ -34,7 +34,8 @@
 
                     <!-- script link to allow dropdowns to work from Tialwinds -->
                     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-                    
+                   
+
 
                     <!-- Selection of base beverages drop down buttons-->
                     <div class="inline-flex items-stretch rounded-md border bg-white" x-data="{ isActive: false }">
@@ -57,48 +58,49 @@
                                 role="menu" x-cloak x-transition x-show="isActive" x-on:click.away="isActive = false"
                                 x-on:keydown.escape.window="isActive = false">
                                 <div class="p-2">
+                                    <!--Making Light Beer a id for local storage-->
                                     <a href="#" id="Light Beer"
                                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
                                         role="menuitem" data-type="drinks">
                                         Non_Alcoholic
                                     </a>
-
+                                    <!--Making Dark Beer a id for local storage-->
                                     <a href="#" id="Dark Beer"
                                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
                                         role="menuitem" data-type="drinks">
                                         Alcoholic
                                     </a>
-
+                                    <!--Making Red Wine a id for local storage-->
                                     <a href="#" id="Red Wine"
                                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
                                         role="menuitem" data-type="drinks">
                                         Red Wine
                                     </a>
-
+                                    <!--Making White Wine a id for local storage-->
                                     <a href="#" id="White Wine"
                                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
                                         role="menuitem" data-type="drinks">
                                         White Wine
                                     </a>
-
+                                    <!--Making Rum a id for local storage-->
                                     <a href="#" id="Rum"
                                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
                                         role="menuitem" data-type="drinks">
                                         Rum
                                     </a>
-
+                                    <!--Making Tequila a id for local storage-->
                                     <a href="#" id="Tequila"
                                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
                                         role="menuitem" data-type="drinks">
                                         Tequila
                                     </a>
-
+                                    <!--Making Vodka a id for local storage-->
                                     <a href="#" id="Vodka"
                                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
                                         role="menuitem" data-type="drinks">
                                         Vodka
                                     </a>
-
+                                    <!--Making Whiskey a id for local storage-->
                                     <a href="#" id="Whiskey"
                                         class="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700 menuItem"
                                         role="menuitem" data-type="drinks">
@@ -108,7 +110,42 @@
                             </div>
                         </div>
                     </div>
+
+                    
+                    <button class="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-700 transition" onclick="openModal('modal')">Open modal</button>
+
+                    <div id="modal" class="fixed hidden z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4 modal">
+                    <div class="relative top-40 mx-auto shadow-xl rounded-md bg-white max-w-md">
+
+                        <!-- Modal header -->
+                        <div class="flex justify-between items-center bg-green-500 text-white text-xl rounded-t-md px-4 py-2">
+                            <h3>Modal header</h3>
+                            <button onclick="closeModal('modal')">x</button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="max-h-48 overflow-y-scroll p-4 bg-green-800">
+                        
+                        
+                            <p>Scrollable modal body</p>
+                            <p>Scrollable modal body</p>
+                            <p>Scrollable modal body</p>
+                            <p>Scrollable modal body</p>
+                            <p>Scrollable modal body</p>
+                            <p>Scrollable modal body</p>
+                            <p>Scrollable modal body</p>
+                            <p>Scrollable modal body</p>
+                            <p>Scrollable modal body</p>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="px-4 py-2 border-t border-t-gray-500 flex justify-end items-center space-x-4">
+                            <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" onclick="closeModal('modal')">Close (ESC)</button>
+                        </div>
+                    </div>
+                </div>                    
     </section>
+    
     <script src="./assets/jss/script.js"></script>
 </body>
 </html>
