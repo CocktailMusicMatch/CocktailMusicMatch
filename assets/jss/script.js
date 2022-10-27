@@ -6,17 +6,8 @@ document.querySelectorAll(".menuItem").forEach (function(button){
         var selection=event.target.innerText
         // debugger
         console.log(type)
-        
-        if (type === "game"){
-            
-            // call drink api here
-            drinkApi(selection)
-        } else if (type === "drinks") {
-            // call game api here
-            
-            drinkApi(selection)
-            
-        }
+        drinkApi(selection)
+        // localStorage.setItem('log', selection);
     })
     
 })
@@ -35,7 +26,7 @@ window.closeModal = function(modalId) {
 
 
 // All of the drink ids turned into values 
-document.getElementById("Light Beer").addEventListener("click", addDrinksToLocalStorage)
+document.getElementById("Light Beer").addEventListener("click", addDrinksToLocalStorage);
 document.getElementById("Dark Beer").addEventListener("click", addDrinksToLocalStorage)
 document.getElementById("Red Wine").addEventListener("click", addDrinksToLocalStorage)
 document.getElementById("White Wine").addEventListener("click", addDrinksToLocalStorage)
