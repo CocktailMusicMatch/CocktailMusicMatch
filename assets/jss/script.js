@@ -12,6 +12,13 @@ document.querySelectorAll(".menuItem").forEach (function(button){
     
 })
 
+// previous button
+document.getElementById("previousChoice").addEventListener("click", loadPrevious)
+function loadPrevious(){
+   var previousDrink = localStorage.getItem("Drink")
+   drinkApi(previousDrink)
+}
+
 // Modal
 window.openModal = function(modalId) {
     document.getElementById(modalId).style.display = 'block'
@@ -22,6 +29,8 @@ window.closeModal = function(modalId) {
     document.getElementById(modalId).style.display = 'none'
     document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
 }
+
+
 
 //pull random game
 function gameApi(){
