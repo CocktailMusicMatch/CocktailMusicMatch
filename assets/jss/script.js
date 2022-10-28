@@ -18,7 +18,7 @@ function loadPrevious(){
    var previousDrink = localStorage.getItem("Drink")
    drinkApi(previousDrink)
 }
-
+    
 // Modal
 window.openModal = function(modalId) {
     document.getElementById(modalId).style.display = 'block'
@@ -85,9 +85,12 @@ function drinkApi(selection){
             var ingredientsList = document.getElementById("ingredientsList");
             var modalImage = document.getElementById('modalImage');
             modalHead.textContent = (data.drinks[0].strDrink);
+            removeAllChildNodes(ingredientsList);
             for(let i=1; i<16; i++) {
                 if (data.drinks[0][`strMeasure${i}`] === null) {
                 break;
+                } else if (data.drinks[0][`strMeasure${i}`] === "") {
+                    continue;
                 }
                 var ingredient = document.createElement('li');
                 ingredient.innerHTML = data.drinks[0][`strMeasure${i}`]+data.drinks[0][`strIngredient${i}`];
@@ -114,3 +117,8 @@ window.openModal = function(modalId) {
   }
 
 
+  function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
