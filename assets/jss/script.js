@@ -6,17 +6,8 @@ document.querySelectorAll(".menuItem").forEach (function(button){
         var selection=event.target.innerText
         // debugger
         console.log(type)
-        
-        if (type === "game"){
-            
-            // call drink api here
-            drinkApi(selection)
-        } else if (type === "drinks") {
-            // call game api here
-            
-            drinkApi(selection)
-            
-        }
+        drinkApi(selection)
+         localStorage.setItem('Drink', selection);
     })
     
 })
@@ -31,28 +22,6 @@ window.closeModal = function(modalId) {
     document.getElementById(modalId).style.display = 'none'
     document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
 }
-
-
-
-// All of the drink ids turned into values 
-// document.getElementById("Light Beer").addEventListener("click", addDrinksToLocalStorage)
-// document.getElementById("Dark Beer").addEventListener("click", addDrinksToLocalStorage)
-// document.getElementById("Red Wine").addEventListener("click", addDrinksToLocalStorage)
-// document.getElementById("White Wine").addEventListener("click", addDrinksToLocalStorage)
-// document.getElementById("Rum").addEventListener("click", addDrinksToLocalStorage)
-// document.getElementById("Tequila").addEventListener("click", addDrinksToLocalStorage)
-// document.getElementById("Vodka").addEventListener("click", addDrinksToLocalStorage)
-// document.getElementById("Whisky").addEventListener("click", addDrinksToLocalStorage)
-
-// The key and function for local storage values
-// function addDrinksToLocalStorage(event){
-//     event.preventDefault();
-//     console.log("addDrinksToLocalStorage");
-//     var clickedElementValue = event.target.getAttribute('id')
-//     console.log(clickedElementValue);
-//     localStorage.setItem("Drink", clickedElementValue)
-    
-// }
 
 //pull random game
 function gameApi(){
@@ -74,6 +43,12 @@ function gameApi(){
         console.log(randomGame.title);
         console.log(randomGame.game_url);
         console.log(randomGame.thumbnail);
+        var modalGame = document.getElementById("gameP");
+        var modalGameImage = document.getElementById("gameImage");
+        var modalGameUrl = document.getElementById("game_url");
+        modalGame.textContent = (randomGame.title);
+        modalGameImage.src = (randomGame.thumbnail); 
+        modalGameUrl.href = (randomGame.game_url);
       })
       .catch(err => console.error(err));
     }
@@ -109,13 +84,12 @@ function drinkApi(selection){
                 ingredient.innerHTML = data.drinks[0][`strMeasure${i}`]+data.drinks[0][`strIngredient${i}`];
                 ingredientsList.appendChild(ingredient);
             }
-
+            
             modalP.textContent = (data.drinks[0].strInstructions);
             modalImage.src = (data.drinks[0].strDrinkThumb);
-
         })
     });
-    
+  gameApi();
 }
 
 // Modal

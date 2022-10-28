@@ -18,7 +18,7 @@
                 <h1
                     class="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
                     Cocktail Game Match<br>
-                    <span class="sm:block"> Mixing Games with Cocktials </span>
+                    <span class="sm:block pb-10"> Mixing Games with Cocktials </span>
                 </h1>
                 <p class="mx-auto mt-4 max-w-xl sm:text-xl sm:leading-relaxed">
                     Select your beverage base choice! <br>
@@ -96,9 +96,11 @@
                             </div>
                         </div>
                     </div>
-
-
-
+                    <!--made a button to select your previous item-->>
+                    <div style="height: 20px;" id="previousChoice">
+                        <button type="button" class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Previous choice</button>
+                   </div>
+                    
                     <!-- <button class="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-700 transition" onclick="openModal('modal')">Open modal</button> -->
 
                     <div id="modal"
@@ -124,7 +126,7 @@
                                 <div class="max-h-full justify-self-center items-center li-4 bg-zinc-500">
                                     <h4 class="text-lg">Pairs well with</h4>
                                     <p id="gameP">test</p>
-                                    <img id='gameImage' src="https://www.freetogame.com/g/540/thumbnail.jpg" class="object-fill" alt="test">
+                                    <a href="*" target="_blank" id="game_url"><img id='gameImage' src="https://www.freetogame.com/g/540/thumbnail.jpg" alt="test"></a>
                                 </div>
                             </div>
                             <!-- Modal footer -->
@@ -133,6 +135,7 @@
                                     onclick="closeModal('modal')">Close (ESC)</button>
                             </div>
                         </div>
+
                     </div>
     </section>
 
@@ -142,3 +145,4 @@
 </body>
 
 </html>
+
