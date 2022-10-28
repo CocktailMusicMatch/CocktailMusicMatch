@@ -7,7 +7,7 @@ document.querySelectorAll(".menuItem").forEach (function(button){
         // debugger
         console.log(type)
         drinkApi(selection)
-        // localStorage.setItem('log', selection);
+         localStorage.setItem('Drink', selection);
     })
     
 })
@@ -21,28 +21,6 @@ window.openModal = function(modalId) {
 window.closeModal = function(modalId) {
     document.getElementById(modalId).style.display = 'none'
     document.getElementsByTagName('body')[0].classList.remove('overflow-y-hidden')
-}
-
-
-
-// All of the drink ids turned into values 
-document.getElementById("Light Beer").addEventListener("click", addDrinksToLocalStorage);
-document.getElementById("Dark Beer").addEventListener("click", addDrinksToLocalStorage)
-document.getElementById("Red Wine").addEventListener("click", addDrinksToLocalStorage)
-document.getElementById("White Wine").addEventListener("click", addDrinksToLocalStorage)
-document.getElementById("Rum").addEventListener("click", addDrinksToLocalStorage)
-document.getElementById("Tequila").addEventListener("click", addDrinksToLocalStorage)
-document.getElementById("Vodka").addEventListener("click", addDrinksToLocalStorage)
-document.getElementById("Whisky").addEventListener("click", addDrinksToLocalStorage)
-
-// The key and function for local storage values
-function addDrinksToLocalStorage(event){
-    event.preventDefault();
-    console.log("addDrinksToLocalStorage");
-    var clickedElementValue = event.target.getAttribute('id')
-    console.log(clickedElementValue);
-    localStorage.setItem("Drink", clickedElementValue)
-    
 }
 
 //pull random game
