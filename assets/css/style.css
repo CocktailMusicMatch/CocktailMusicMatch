@@ -2,6 +2,12 @@ body {
     columns: white;
 }
 
-h4 {
+/* h4 {
     font-size: 20px;
+} */
+
+div.max-h-full {
+    display: grid;
+    justify-content: center;
+    align-content: center;
 }
