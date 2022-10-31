@@ -12,7 +12,7 @@ As a cocktail hobbyist, I want to see a random cocktail and game, So I can enjoy
 
 
 ## Tasks/Features
-* Generate a game that is playale in browser and drink with a recipe
+* Generate a game that is playable in browser and drink with a recipe
 * Be able to filter by which type of base drink you'd like
 
 ## Installation
