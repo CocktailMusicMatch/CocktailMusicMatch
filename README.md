@@ -2,14 +2,19 @@
 
 Have a Cocktail with a recipe generated with a game to play while I enjoy it.
 
-
 ## User Story
 As a cocktail hobbyist, I want to see a random cocktail and game, So I can enjoy new drinks and gaming.
 
+## GitHub Links
+
+Link for project:
+https://cocktailmusicmatch.github.io/CocktailMusicMatch/
+
+GitHub Repository Link:
+https://github.com/CocktailMusicMatch/CocktailMusicMatch 
 
 ## Wireframe Example: 
 ![Wireframe screenshot](./wireframe_ex.png)
-
 
 ## Tasks/Features
 * Generate a game that is playable in browser and drink with a recipe
@@ -51,7 +56,7 @@ https://github.com/JCool221<br>
 Harper: JavaScript, APIs, Project Management<br>
 https://github.com/hklotz13
 
-## APIs:
+## APIs and CSS:
 
 https://www.thecocktaildb.com/ 
 Game api 
@@ -59,6 +64,8 @@ Game api
 https://www.thecocktaildb.com/api/json/v1/1/random.php
 Drink api
 
+https://tailwindui.com/templates?ref=sidebar
+Tailwinds CSS Templates
 
 ## License
 
