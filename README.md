@@ -43,12 +43,13 @@ Please take some time and enjoy the games.
 Laura: Frontend, Tailwinds, Presentation <br>
 https://github.com/labeutler<br>
 Sal: Local Storage, Wireframe/Proposal<br>
-
+https://github.com/salvo-t
 Griff: Modal, Presentation, Proposal<br>
 https://github.com/GriffinNB<br>
 Josh: JavaScript, APIs, Git Organization<br>
 https://github.com/JCool221<br>
 Harper: JavaScript, APIs, Project Management<br>
+https://github.com/hklotz13
 
 ## APIs:
 
